@@ -1,0 +1,91 @@
+﻿@model Dota2Stat.Models.DB.Item
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IName" class="control-label"></label>
+                <input asp-for="IName" class="form-control" />
+                <span asp-validation-for="IName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDescription" class="control-label"></label>
+                <input asp-for="IDescription" class="form-control" />
+                <span asp-validation-for="IDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IPrice" class="control-label"></label>
+                <input asp-for="IPrice" class="form-control" />
+                <span asp-validation-for="IPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IType" class="control-label"></label>
+                <select asp-for="IType" class="form-control">
+                    <option value="Consumables">Consumables</option>
+                    <option value="Attributes">Attributes</option>
+                    <option value="Equipment">Equipment</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                    <option value="Secret shop">Secret shop</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Support">Support</option>
+                    <option value="Magical">Magical</option>
+                    <option value="Armor">Armor</option>
+                    <option value="Weapons">Weapons</option>
+                    <option value="Artifacts">Artifacts</option>
+                </select>
+                <span asp-validation-for="IType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IMaxCharges" class="control-label"></label>
+                <input asp-for="IMaxCharges" class="form-control" />
+                <span asp-validation-for="IMaxCharges" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IMaxStack" class="control-label"></label>
+                <input asp-for="IMaxStack" class="form-control" />
+                <span asp-validation-for="IMaxStack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDisassemble" class="control-label"></label>
+                <select asp-for="IDisassemble" class="form-control">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <span asp-validation-for="IDisassemble" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IAssemble" class="control-label"></label>
+                <select asp-for="IAssemble" class="form-control">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <span asp-validation-for="IAssemble" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISpecifications" class="control-label"></label>
+                <input asp-for="ISpecifications" class="form-control" />
+                <span asp-validation-for="ISpecifications" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

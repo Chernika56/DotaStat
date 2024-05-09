@@ -1,0 +1,81 @@
+﻿@model Dota2Stat.Models.TournamentTeam
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Tournament</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Tournament.TrId" />
+            <div class="form-group">
+                <label asp-for="Tournament.TrName" class="control-label"></label>
+                <input asp-for="Tournament.TrName" class="form-control" />
+                <span asp-validation-for="Tournament.TrName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrTier" class="control-label"></label>
+                <input asp-for="Tournament.TrTier" class="form-control" />
+                <span asp-validation-for="Tournament.TrTier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrParticipants" class="control-label"></label>
+                <input asp-for="Tournament.TrParticipants" class="form-control" />
+                <span asp-validation-for="Tournament.TrParticipants" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrOrganizer" class="control-label"></label>
+                <select asp-for="Tournament.TrOrganizer" class="form-control" asp-items="ViewBag.TrOrganizer"></select>
+                <span asp-validation-for="Tournament.TrOrganizer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrPrize" class="control-label"></label>
+                <input asp-for="Tournament.TrPrize" class="form-control" />
+                <span asp-validation-for="Tournament.TrPrize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrPlace" class="control-label"></label>
+                <input asp-for="Tournament.TrPlace" class="form-control" />
+                <span asp-validation-for="Tournament.TrPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrStartDate" class="control-label"></label>
+                <input asp-for="Tournament.TrStartDate" class="form-control" />
+                <span asp-validation-for="Tournament.TrStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tournament.TrEndDate" class="control-label"></label>
+                <input asp-for="Tournament.TrEndDate" class="form-control" />
+                <span asp-validation-for="Tournament.TrEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TmId" class="control-label">Add Team</label>
+                <select asp-for="TmId" class="form-control" asp-items="@(ViewBag.Teams)">
+                    <option value="">Select Team</option>
+                </select>
+                <span asp-validation-for="TmId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TmResult" class="control-label"></label>
+                <input asp-for="TmResult" class="form-control" />
+                <span asp-validation-for="TmResult" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

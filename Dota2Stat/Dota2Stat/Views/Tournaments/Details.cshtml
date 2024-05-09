@@ -1,0 +1,83 @@
+﻿@model Dota2Stat.Models.DB.Tournament
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tournament</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Name
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrName)
+        </dd>
+        <dt class = "col-sm-2">
+            Tier
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrTier)
+        </dd>
+        <dt class = "col-sm-2">
+            Number of participants
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrParticipants)
+        </dd>
+        <dt class = "col-sm-2">
+            Prize
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrPrize)
+        </dd>
+        <dt class = "col-sm-2">
+            Place
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrPlace)
+        </dd>
+        <dt class = "col-sm-2">
+            Start date
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrStartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            End date
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrEndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            Organizer
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrOrganizerNavigation.OpName)
+        </dd>
+    </dl>
+</div>
+<div>
+<h4>Teams</h4>
+<hr />
+<dl class="row">
+    @foreach (var team in Model.M2mTournamentTeams)
+    {
+        <dt class="col-sm-2">
+                <b>@team.TrtmResult</b>
+        </dt>
+        <dd class="col-sm-10">
+            <a href="@Url.Action("Details", "Teams", new { id = team.TrtmTeamNavigation.TmId })">
+                @team.TrtmTeamNavigation.TmName
+            </a>
+        </dd>
+    }
+</dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TrId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

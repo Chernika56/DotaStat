@@ -1,0 +1,59 @@
+﻿@model Dota2Stat.Models.DB.Player
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Player</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PlId" />
+            <div class="form-group">
+                <label asp-for="PlFirstName" class="control-label">Firstname</label>
+                <input asp-for="PlFirstName" class="form-control" />
+                <span asp-validation-for="PlFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlLastName" class="control-label">Lastname</label>
+                <input asp-for="PlLastName" class="form-control" />
+                <span asp-validation-for="PlLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlNickname" class="control-label">NickName</label>
+                <input asp-for="PlNickname" class="form-control" />
+                <span asp-validation-for="PlNickname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlCountry" class="control-label">Country</label>
+                <select asp-for="PlCountry" class="form-control" asp-items="ViewBag.PlCountry"></select>
+                <span asp-validation-for="PlCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlMmr" class="control-label">MMR</label>
+                <input asp-for="PlMmr" class="form-control" />
+                <span asp-validation-for="PlMmr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlRang" class="control-label">Rang</label>
+                <input asp-for="PlRang" class="form-control" />
+                <span asp-validation-for="PlRang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

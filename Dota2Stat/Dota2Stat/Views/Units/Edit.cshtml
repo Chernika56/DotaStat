@@ -1,0 +1,136 @@
+﻿@model Dota2Stat.Models.DB.Unit
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Unit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UName" class="control-label">Name</label>
+                <input asp-for="UName" class="form-control" />
+                <span asp-validation-for="UName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UDescription" class="control-label">Description</label>
+                <input asp-for="UDescription" class="form-control" />
+                <span asp-validation-for="UDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UType" class="control-label">Type</label>
+                <select asp-for="UType" class="form-control">
+                    <option value="structures">Structures</option>
+                    <option value="lane creeps">Lane creeps</option>
+                    <option value="small creeps">Small creeps</option>
+                    <option value="medium creeps">Medium creeps</option>
+                    <option value="large creeps">Large creeps</option>
+                    <option value="ancient creeps">Ancient creeps</option>
+                    <option value="roshan">Roshan</option>
+                    <option value="tormentor">Tormentor</option>
+                    <option value="observer">Observer</option>
+                </select>
+                <span asp-validation-for="UType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UHp" class="control-label">HP</label>
+                <input asp-for="UHp" class="form-control" type="number" />
+                <span asp-validation-for="UHp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UMp" class="control-label">MP</label>
+                <input asp-for="UMp" class="form-control" type="number" />
+                <span asp-validation-for="UMp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UHpr" class="control-label">HPR</label>
+                <input asp-for="UHpr" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="UHpr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UMpr" class="control-label">MPR</label>
+                <input asp-for="UMpr" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="UMpr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UDamage" class="control-label">Damage</label>
+                <input asp-for="UDamage" class="form-control" type="number" />
+                <span asp-validation-for="UDamage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UMoveSpeed" class="control-label">Move Speed</label>
+                <input asp-for="UMoveSpeed" class="form-control" type="number" />
+                <span asp-validation-for="UMoveSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UArmor" class="control-label">Armor</label>
+                <input asp-for="UArmor" class="form-control" type="number" />
+                <span asp-validation-for="UArmor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UAttackSpeed" class="control-label">Attack Speed</label>
+                <input asp-for="UAttackSpeed" class="form-control" type="number" />
+                <span asp-validation-for="UAttackSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UAttackInterval" class="control-label">Attack Interval</label>
+                <input asp-for="UAttackInterval" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="UAttackInterval" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UAttackType" class="control-label">Attack Type</label>
+                <select asp-for="UAttackType" class="form-control">
+                    <option value="melee">Melee</option>
+                    <option value="range">Range</option>
+                </select>
+                <span asp-validation-for="UAttackType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UAttackRange" class="control-label">Attack Range</label>
+                <input asp-for="UAttackRange" class="form-control" type="number" />
+                <span asp-validation-for="UAttackRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="USpellAmp" class="control-label">Spell AMP</label>
+                <input asp-for="USpellAmp" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="USpellAmp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UMagicResist" class="control-label">Magic Resist</label>
+                <input asp-for="UMagicResist" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="UMagicResist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UStatusResist" class="control-label">Status Resist</label>
+                <input asp-for="UStatusResist" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="UStatusResist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UGold" class="control-label">Gold</label>
+                <input asp-for="UGold" class="form-control" type="number" />
+                <span asp-validation-for="UGold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UExperience" class="control-label">Experience</label>
+                <input asp-for="UExperience" class="form-control" type="number" />
+                <span asp-validation-for="UExperience" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

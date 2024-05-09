@@ -1,0 +1,72 @@
+﻿@model Dota2Stat.Models.DB.Item
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Name
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IName)
+        </dd>
+        <dt class = "col-sm-2">
+            Description
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            Price
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            Type
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IType)
+        </dd>
+        <dt class = "col-sm-2">
+            Maximum number of charges
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IMaxCharges)
+        </dd>
+        <dt class = "col-sm-2">
+            Maximum number in the stack
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IMaxStack)
+        </dd>
+        <dt class = "col-sm-2">
+            Disassemble
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDisassemble)
+        </dd>
+        <dt class = "col-sm-2">
+            Assemble
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IAssemble)
+        </dd>
+        <dt class = "col-sm-2">
+            Specifications
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISpecifications)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

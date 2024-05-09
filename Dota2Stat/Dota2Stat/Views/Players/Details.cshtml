@@ -1,0 +1,54 @@
+﻿@model Dota2Stat.Models.DB.Player
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Firstname
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlFirstName)
+        </dd>
+        <dt class="col-sm-2">
+            Lastname
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlLastName)
+        </dd>
+        <dt class="col-sm-2">
+            NickName
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlNickname)
+        </dd>
+        <dt class="col-sm-2">
+            MMR
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlMmr)
+        </dd>
+        <dt class="col-sm-2">
+            Rang
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlRang)
+        </dd>
+        <dt class="col-sm-2">
+            Country
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlCountryNavigation.CnName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PlId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,67 @@
+﻿@model Dota2Stat.Models.DB.Tournament
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Tournament</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TrName" class="control-label">Name</label>
+                <input asp-for="TrName" class="form-control" />
+                <span asp-validation-for="TrName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrTier" class="control-label">Tier</label>
+                <input asp-for="TrTier" class="form-control" />
+                <span asp-validation-for="TrTier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrParticipants" class="control-label">Participants</label>
+                <input asp-for="TrParticipants" class="form-control" />
+                <span asp-validation-for="TrParticipants" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrOrganizer" class="control-label">Organizer</label>
+                <select asp-for="TrOrganizer" class ="form-control" asp-items="ViewBag.TrOrganizer"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrPrize" class="control-label">Prize</label>
+                <input asp-for="TrPrize" class="form-control" />
+                <span asp-validation-for="TrPrize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrPlace" class="control-label">Place</label>
+                <input asp-for="TrPlace" class="form-control" />
+                <span asp-validation-for="TrPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrStartDate" class="control-label">StartDate</label>
+                <input asp-for="TrStartDate" class="form-control" type="date"/>
+                <span asp-validation-for="TrStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrEndDate" class="control-label">EndDate</label>
+                <input asp-for="TrEndDate" class="form-control" type="date" />
+                <span asp-validation-for="TrEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

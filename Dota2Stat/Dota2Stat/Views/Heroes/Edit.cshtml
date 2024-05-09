@@ -1,0 +1,166 @@
+﻿@model Dota2Stat.Models.DB.Hero
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Hero</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HName" class="control-label"></label>
+                <input asp-for="HName" class="form-control" />
+                <span asp-validation-for="HName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAttribute" class="control-label"></label>
+                <select asp-for="HAttribute" class="form-control">
+                    <option value="agility">Agility</option>
+                    <option value="strength">Strength</option>
+                    <option value="intelligence">Intelligence</option>
+                    <option value="universal">Universal</option>
+                </select>
+                <span asp-validation-for="HAttribute" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HDescription" class="control-label"></label>
+                <input asp-for="HDescription" class="form-control" />
+                <span asp-validation-for="HDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HHp" class="control-label"></label>
+                <input asp-for="HHp" class="form-control" />
+                <span asp-validation-for="HHp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HMp" class="control-label"></label>
+                <input asp-for="HMp" class="form-control" />
+                <span asp-validation-for="HMp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HHpr" class="control-label"></label>
+                <input asp-for="HHpr" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HHpr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HMpr" class="control-label"></label>
+                <input asp-for="HMpr" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HMpr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HStrength" class="control-label"></label>
+                <input asp-for="HStrength" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HStrength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HStrengthPerLvl" class="control-label"></label>
+                <input asp-for="HStrengthPerLvl" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HStrengthPerLvl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAgility" class="control-label"></label>
+                <input asp-for="HAgility" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HAgility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAgilityPerLvl" class="control-label"></label>
+                <input asp-for="HAgilityPerLvl" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HAgilityPerLvl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HIntelligence" class="control-label"></label>
+                <input asp-for="HIntelligence" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HIntelligence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HIntelligencePerLvl" class="control-label"></label>
+                <input asp-for="HIntelligencePerLvl" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HIntelligencePerLvl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HDamage" class="control-label"></label>
+                <input asp-for="HDamage" class="form-control" />
+                <span asp-validation-for="HDamage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HMoveSpeed" class="control-label"></label>
+                <input asp-for="HMoveSpeed" class="form-control" />
+                <span asp-validation-for="HMoveSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HArmor" class="control-label"></label>
+                <input asp-for="HArmor" class="form-control" />
+                <span asp-validation-for="HArmor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAttackSpeed" class="control-label"></label>
+                <input asp-for="HAttackSpeed" class="form-control" />
+                <span asp-validation-for="HAttackSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAttackInterval" class="control-label"></label>
+                <input asp-for="HAttackInterval" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="HAttackInterval" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAttackType" class="control-label"></label>
+                <select asp-for="HAttackType" class="form-control">
+                    <option value="melee">Melee</option>
+                    <option value="range">Range</option>
+                </select>
+                <span asp-validation-for="HAttackType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAttackRange" class="control-label"></label>
+                <input asp-for="HAttackRange" class="form-control" />
+                <span asp-validation-for="HAttackRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HSpellAmp" class="control-label"></label>
+                <input asp-for="HSpellAmp" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="HSpellAmp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HMagicResist" class="control-label"></label>
+                <input asp-for="HMagicResist" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="HMagicResist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HStatusResist" class="control-label"></label>
+                <input asp-for="HStatusResist" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="HStatusResist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HEvasion" class="control-label"></label>
+                <input asp-for="HEvasion" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="HEvasion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HScepter" class="control-label"></label>
+                <input asp-for="HScepter" class="form-control" />
+                <span asp-validation-for="HScepter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HShard" class="control-label"></label>
+                <input asp-for="HShard" class="form-control" />
+                <span asp-validation-for="HShard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

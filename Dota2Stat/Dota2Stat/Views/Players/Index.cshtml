@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Dota2Stat.Models.DB.Player>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Players</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @* @Html.DisplayNameFor(model => model.PlRang) *@Rang
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.PlFirstName) *@Firstname
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.PlLastName) *@NickName
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.PlNickname) *@Lastname
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.PlMmr) *@MMR
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.PlCountryNavigation) *@Country
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlRang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlNickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlMmr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlCountryNavigation.CnName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PlId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PlId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PlId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

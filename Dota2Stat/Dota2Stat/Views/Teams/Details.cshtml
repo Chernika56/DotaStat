@@ -1,0 +1,47 @@
+﻿@model Dota2Stat.Models.DB.Team
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Team</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TmName)
+        </dd>
+        <dt class="col-sm-2">
+            Rating
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TmRating)
+        </dd>
+    </dl>
+</div>
+<div>
+    <h4>Players</h4>
+    <hr />
+    <dl class="row">
+        @foreach (var player in Model.M2mPlayerTeams)
+        {
+            <dt class="col-sm-2">
+                NickName
+            </dt>
+            <dd class="col-sm-10">
+                <a href="@Url.Action("Details", "Players", new { id = @player.PltmPlayerNavigation.PlId })">
+                    @player.PltmPlayerNavigation.PlNickname 
+                </a> (@player.PltmRole)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TmId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

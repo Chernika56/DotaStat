@@ -1,0 +1,177 @@
+﻿@model Dota2Stat.Models.DB.Hero
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Hero</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAttribute)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAttribute)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HHp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HHp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HMp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HMp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HHpr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HHpr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HMpr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HMpr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HStrength)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HStrength)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HStrengthPerLvl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HStrengthPerLvl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAgility)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAgility)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAgilityPerLvl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAgilityPerLvl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HIntelligence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HIntelligence)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HIntelligencePerLvl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HIntelligencePerLvl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HDamage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HDamage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HMoveSpeed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HMoveSpeed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HArmor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HArmor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAttackSpeed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAttackSpeed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAttackInterval)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAttackInterval)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAttackType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAttackType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HAttackRange)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HAttackRange)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HSpellAmp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HSpellAmp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HMagicResist)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HMagicResist)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HStatusResist)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HStatusResist)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HEvasion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HEvasion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HScepter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HScepter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HShard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HShard)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="HId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

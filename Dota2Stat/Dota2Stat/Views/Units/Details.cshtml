@@ -1,0 +1,132 @@
+﻿@model Dota2Stat.Models.DB.Unit
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Unit</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UName)
+        </dd>
+        <dt class="col-sm-2">
+            Description
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UDescription)
+        </dd>
+        <dt class="col-sm-2">
+            Type
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UType)
+        </dd>
+        <dt class="col-sm-2">
+            HP
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UHp)
+        </dd>
+        <dt class="col-sm-2">
+            MP
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UMp)
+        </dd>
+        <dt class="col-sm-2">
+            HPR
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UHpr)
+        </dd>
+        <dt class="col-sm-2">
+            MPR
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UMpr)
+        </dd>
+        <dt class="col-sm-2">
+            Damage
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UDamage)
+        </dd>
+        <dt class="col-sm-2">
+            Move Speed
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UMoveSpeed)
+        </dd>
+        <dt class="col-sm-2">
+            Armor
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UArmor)
+        </dd>
+        <dt class="col-sm-2">
+            Attack Speed
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UAttackSpeed)
+        </dd>
+        <dt class="col-sm-2">
+            Attack Interval
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UAttackInterval)
+        </dd>
+        <dt class="col-sm-2">
+            Attack Type
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UAttackType)
+        </dd>
+        <dt class="col-sm-2">
+            attack Range
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UAttackRange)
+        </dd>
+        <dt class="col-sm-2">
+            Spell AMP
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.USpellAmp)
+        </dd>
+        <dt class="col-sm-2">
+            Magic Resist
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UMagicResist)
+        </dd>
+        <dt class="col-sm-2">
+            Status Resist
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UStatusResist)
+        </dd>
+        <dt class="col-sm-2">
+            Gold
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UGold)
+        </dd>
+        <dt class="col-sm-2">
+            Experience
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UExperience)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.UId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
